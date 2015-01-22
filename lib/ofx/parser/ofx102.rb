@@ -88,7 +88,8 @@ module OFX
           :ref_number        => element.search("refnum").inner_text,
           :posted_at         => build_date(element.search("dtposted").inner_text),
           :type              => build_type(element),
-          :sic               => element.search("sic").inner_text
+          :sic               => element.search("sic").inner_text,
+          :currency          => element.search("currency").inner_text
         })
       end
 

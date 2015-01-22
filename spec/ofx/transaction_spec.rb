@@ -47,6 +47,9 @@ describe OFX::Transaction do
     it "should have sic" do
       @transaction.sic.should == '5072'
     end
+    it "should have currency" do
+      @transaction.currency.should == 'USD'
+    end
   end
 
   context "credit" do
@@ -84,6 +87,9 @@ describe OFX::Transaction do
     
     it "should have empty sic" do
       @transaction.sic.should == ''
+    end
+    it "should have currency" do
+      @transaction.currency.should == 'USD'
     end
   end
 
